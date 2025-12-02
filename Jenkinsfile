@@ -20,11 +20,11 @@ pipeline {
             }
         }
     }
-   post {
-    always {
-        // No JUnit reports available for this simple example.
-        // If you add tests later, change the pattern to something like: junit '**/TEST-*.xml'
-        echo 'Build completed.'
+    post {
+        always {
+            // No JUnit reports available for this simple example.
+            // If you add tests later, change the pattern to something like: junit '**/TEST-*.xml'
+            echo 'Build completed.'
+        }
     }
-}
-
+}  // <-- Added closing brace for pipeline
