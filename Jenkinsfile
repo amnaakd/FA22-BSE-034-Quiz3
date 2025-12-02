@@ -20,5 +20,11 @@ pipeline {
             }
         }
     }
-    post { always { junit allowEmptyResults: true, testResults: '' } }
+   post {
+    always {
+        // No JUnit reports available for this simple example.
+        // If you add tests later, change the pattern to something like: junit '**/TEST-*.xml'
+        echo 'Build completed.'
+    }
 }
+
